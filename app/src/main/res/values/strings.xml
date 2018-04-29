@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ticket Raise</string>
+    <string name="next">Next</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="error_message_phone">Please enter valid phone number !</string>
+    <string name="code">Code</string>
 </resources>
