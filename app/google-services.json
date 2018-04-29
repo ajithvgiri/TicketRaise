@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "68804078125",
+    "firebase_url": "https://coopathon-b8571.firebaseio.com",
+    "project_id": "coopathon-b8571",
+    "storage_bucket": "coopathon-b8571.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68804078125:android:2fc9dad91ff3027a",
+        "android_client_info": {
+          "package_name": "com.ajithvgiri.ticketraise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68804078125-edjuvdig1771kb8g7842d78p7j9dhoql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ajithvgiri.ticketraise",
+            "certificate_hash": "1ffc7a8396b25f548f299d6f0403485a5905941b"
+          }
+        },
+        {
+          "client_id": "68804078125-2s4srve2igem4i0lvefnnbri0n20uu8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwoETsabvM8ozZEsLC3MNVmQZ9uSVsIYY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68804078125-2s4srve2igem4i0lvefnnbri0n20uu8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
