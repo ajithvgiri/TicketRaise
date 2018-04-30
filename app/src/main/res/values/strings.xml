@@ -4,4 +4,7 @@
     <string name="mobile_number">Mobile number</string>
     <string name="error_message_phone">Please enter valid phone number !</string>
     <string name="code">Code</string>
+    <string name="default_notification_channel_id">default_notification</string>
+    <string name="details">Details</string>
+    <string name="raise_a_ticket">Raise a Ticket</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.ajithvgiri.ticketraise.R
 import com.ajithvgiri.ticketraise.activity.home.HomeActivity
+import com.ajithvgiri.ticketraise.utils.AppPreferences
 import com.ajithvgiri.ticketraise.utils.AppUtils
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -28,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var firebaseAuth: FirebaseAuth
     lateinit var mResendToken: PhoneAuthProvider.ForceResendingToken
     var mVerificationId = ""
+    var mobile = ""
     private val mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {
@@ -40,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
             AppUtils.instance.debugLog(TAG, "onVerificationCompleted:" + credential)
             val intent = Intent(this@LoginActivity, VerificationActivity::class.java)
             intent.putExtra("credential", credential)
+            intent.putExtra("mobile ",mobile)
             startActivity(intent)
             finish()
         }
@@ -73,9 +76,9 @@ class LoginActivity : AppCompatActivity() {
             // by combining the code with a verification ID.
             // Save verification ID and resending token so we can use them later
             mVerificationId = verificationId!!
-
             val intent = Intent(this@LoginActivity, VerificationActivity::class.java)
             intent.putExtra("mVerificationId", mVerificationId)
+            intent.putExtra("mobile",mobile)
             startActivity(intent)
             AppUtils.instance.debugLog(TAG, "onCodeSent:" + verificationId!!)
 //            mResendToken = token
@@ -104,6 +107,8 @@ class LoginActivity : AppCompatActivity() {
                 try {
                     val phoneNumber = phoneUtil.parse(editTextPhone.text.toString(), "IN")
                     val formatedNumber = phoneUtil.format(phoneNumber, PhoneNumberUtil.PhoneNumberFormat.E164)
+                    mobile = phoneUtil.format(phoneNumber,PhoneNumberUtil.PhoneNumberFormat.INTERNATIONAL)
+                    AppPreferences(this).setMobile(mobile)
                     val phoneAuthProvider = PhoneAuthProvider.getInstance()
                     phoneAuthProvider.verifyPhoneNumber(
                             formatedNumber, // Phone number to verify

@@ -10,17 +10,24 @@ class AppPreferences(context: Context) {
 
     private var sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-    fun setUserLogin(table: String, id: Int, tableID: Int, role: Int) {
+    fun setUserLogin( id: String,fullname:String,mobile: String, status: Int) {
         val editor = sharedPreferences!!.edit()
-        editor.putInt("id", id)
-        editor.putString("table", table)
-        editor.putInt("tableID", tableID)
-        editor.putInt("role", role)
+        editor.putString("id", id)
+        editor.putString("fullname",fullname)
+        editor.putString("mobile", mobile)
+        editor.putInt("status", status)
+        editor.apply()
+    }
+
+    fun setMobile(mobile:String){
+        val editor = sharedPreferences!!.edit()
+        editor.putString("mobile", mobile)
         editor.apply()
     }
 
 
-    fun getTable(): String = sharedPreferences.getString("table", "")
+
+    fun getMobile(): String = sharedPreferences.getString("mobile", "")
 
 //    fun getTableID(): Int = sharedPreferences.getInt("tableID", 0)
 

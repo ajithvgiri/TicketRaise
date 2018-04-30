@@ -37,9 +37,6 @@ class VerificationActivity : AppCompatActivity() {
                 signInWithPhoneAuthCredential(credential)
             }
 
-            if (extras.getString("mobile") != null){
-                mobile = extras.getString("mobile")
-            }
         }
 
         buttonNext.setOnClickListener {

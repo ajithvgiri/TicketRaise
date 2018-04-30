@@ -9,8 +9,8 @@ class Api private constructor(){
             get() = api
     }
 
-    val server= "http://example.com/"
+    val server= "https://coopathon.herokuapp.com/"
 
     //Login
-    val login = "login"
+    val register = "registerUser"
 }

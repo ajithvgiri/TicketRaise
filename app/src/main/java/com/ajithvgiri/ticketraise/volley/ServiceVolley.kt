@@ -16,7 +16,7 @@ class ServiceVolley : ServiceInterface {
     val TAG = ServiceVolley::class.java.simpleName
 
     override fun post(path: String, params: JSONObject, completionHandler: (response: JSONObject?) -> Unit) {
-
+        AppUtils.instance.debugLog(TAG, "/post request params: $params")
         val jsonObjReq = object : JsonObjectRequest(Method.POST, Api.instance.server + path, params,
                 Response.Listener<JSONObject> { response ->
                     AppUtils.instance.debugLog(TAG, "/post request OK! Response: $response")
