@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_verification.*
 
 class VerificationActivity : AppCompatActivity() {
 
-    var TAG: String = "PhoneVerificationActivity"
+    var TAG: String = "VerificationActivity"
 
     lateinit var firebaseAuth: FirebaseAuth
     private var mVerificationId = ""

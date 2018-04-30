@@ -31,7 +31,7 @@ class AppPreferences(context: Context) {
 
 //    fun getTableID(): Int = sharedPreferences.getInt("tableID", 0)
 
-    fun getId(): Int = sharedPreferences.getInt("id", 0)
+    fun getId(): String = sharedPreferences.getString("id", "")
 
     fun getRole(): Int = sharedPreferences.getInt("role", 0)
 

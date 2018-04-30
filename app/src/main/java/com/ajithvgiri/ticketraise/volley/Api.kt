@@ -13,4 +13,6 @@ class Api private constructor(){
 
     //Login
     val register = "registerUser"
+
+    var raiseticket = "createRequest"
 }
